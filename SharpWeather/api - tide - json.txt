@@ -1,0 +1,31 @@
+http://api.wunderground.com/api/8390d409d9f2d532/tide/q/fl/Greenwood.json
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "tide": 1
+  }
+	}
+		,
+	"tide": {
+		"tideInfo": [
+		{
+		"tideSite":"",
+		"lat":"",
+		"lon":"",
+		"units":"",
+		"type":"",
+		"tzname":""
+		}
+		],
+		"tideSummary": [
+		],
+		"tideSummaryStats": [
+		{
+  "maxheight":-99.000000,
+  "minheight":99.000000
+		}
+  ]
+	}
+}

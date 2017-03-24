@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{871B1EE9-22D5-45A9-9999-71149CB6198F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpWeather</RootNamespace>
+    <AssemblyName>SharpWeather</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Sharp_Weather.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertControl.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AlertControl.Designer.cs">
+      <DependentUpon>AlertControl.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="alerts.cs" />
+    <Compile Include="almanac.cs" />
+    <Compile Include="conditions.cs" />
+    <Compile Include="currenthurricane.cs" />
+    <Compile Include="DoubleBufferedPanel.cs" />
+    <Compile Include="Forecast10.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="geolookup.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="Hourly.cs" />
+    <Compile Include="Hourly10day.cs" />
+    <Compile Include="Metro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metro.Designer.cs">
+      <DependentUpon>Metro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planner.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadAPI.cs" />
+    <Compile Include="SimpleForecast.cs" />
+    <Compile Include="Tide.cs" />
+    <Compile Include="weatherIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>weatherIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherMap.cs" />
+    <Compile Include="WeatherMap.Designer.cs">
+      <DependentUpon>WeatherMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webcams.cs" />
+    <Compile Include="zipcode.cs" />
+    <EmbeddedResource Include="AlertControl.resx">
+      <DependentUpon>AlertControl.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metro.resx">
+      <DependentUpon>Metro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="weatherIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>weatherIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeatherMap.resx">
+      <DependentUpon>WeatherMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\conditions.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api - alerts - json.txt" />
+    <Content Include="api - almanac - json.txt" />
+    <Content Include="api - conditions - json.txt" />
+    <Content Include="api - currenthurricane -json.txt" />
+    <Content Include="api - forecast10day - json.txt" />
+    <Content Include="api - geolookup - json.txt" />
+    <Content Include="api - historyYYYYMMDD - json.txt" />
+    <Content Include="api - hourly - json.txt" />
+    <Content Include="api - hourly10day - json.txt" />
+    <Content Include="api - planner - json.txt" />
+    <Content Include="api - tide - json.txt" />
+    <Content Include="api - webcams - json.txt" />
+    <None Include="Resources\Clear_1.jpg" />
+    <None Include="Resources\Clear_2.jpg" />
+    <None Include="Resources\Clear_3.jpg" />
+    <None Include="Resources\Clear_4.jpg" />
+    <None Include="Resources\Clear_5.jpg" />
+    <None Include="Resources\Clear_6.jpg" />
+    <None Include="Resources\Cloudy_1.jpg" />
+    <None Include="Resources\Foggy_1.jpg" />
+    <None Include="Resources\Hazy_1.jpg" />
+    <None Include="Resources\PartlyCloudy_1.jpg" />
+    <None Include="Resources\PartyCloudy_1.jpg" />
+    <None Include="Resources\Rain_1.jpg" />
+    <Content Include="TextFile2.txt" />
+    <None Include="Resources\sunny.bmp" />
+    <None Include="Resources\sunny.ico" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\10.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\14.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\17.png" />
+    <None Include="Resources\18.png" />
+    <None Include="Resources\19.png" />
+    <None Include="Resources\20.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\24.png" />
+    <None Include="Resources\25.png" />
+    <None Include="Resources\26.png" />
+    <None Include="Resources\27.png" />
+    <None Include="Resources\28.png" />
+    <None Include="Resources\29.png" />
+    <None Include="Resources\30.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\34.png" />
+    <None Include="Resources\35.png" />
+    <None Include="Resources\36.png" />
+    <None Include="Resources\37.png" />
+    <None Include="Resources\38.png" />
+    <None Include="Resources\39.png" />
+    <None Include="Resources\40.png" />
+    <None Include="Resources\41.png" />
+    <None Include="Resources\42.png" />
+    <None Include="Resources\43.png" />
+    <None Include="Resources\44.png" />
+    <None Include="Resources\45.png" />
+    <None Include="Resources\46.png" />
+    <None Include="Resources\47.png" />
+    <None Include="Resources\48.png" />
+    <None Include="Resources\49.png" />
+    <None Include="Resources\50.png" />
+    <None Include="Resources\51.png" />
+    <None Include="Resources\52.png" />
+    <None Include="Resources\53.png" />
+    <None Include="Resources\54.png" />
+    <None Include="Resources\55.png" />
+    <None Include="Resources\56.png" />
+    <None Include="Resources\57.png" />
+    <None Include="Resources\58.png" />
+    <None Include="Resources\59.png" />
+    <None Include="Resources\60.png" />
+    <None Include="Resources\61.png" />
+    <None Include="Resources\62.png" />
+    <None Include="Resources\63.png" />
+    <None Include="Resources\64.png" />
+    <None Include="Resources\65.png" />
+    <None Include="Resources\66.png" />
+    <None Include="Resources\67.png" />
+    <None Include="Resources\68.png" />
+    <None Include="Resources\69.png" />
+    <None Include="Resources\70.png" />
+    <None Include="Resources\71.png" />
+    <None Include="Resources\72.png" />
+    <None Include="Resources\73.png" />
+    <None Include="Resources\74.png" />
+    <None Include="Resources\75.png" />
+    <None Include="Resources\76.png" />
+    <None Include="Resources\77.png" />
+    <None Include="Resources\78.png" />
+    <None Include="Resources\79.png" />
+    <None Include="Resources\80.png" />
+    <None Include="Resources\81.png" />
+    <None Include="Resources\82.png" />
+    <None Include="Resources\83.png" />
+    <None Include="Resources\84.png" />
+    <None Include="Resources\571.png" />
+    <Content Include="conditions.txt" />
+    <None Include="Resources\BLUEHERR.BMP" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

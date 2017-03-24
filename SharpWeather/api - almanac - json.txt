@@ -1,0 +1,38 @@
+http://api.wunderground.com/api/8390d409d9f2d532/alerts/q/FL/Greenwood.json
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "almanac": 1
+  }
+	}
+		,
+	"almanac": {
+		"airport_code": "KMAI",
+		"temp_high": {
+		"normal": {
+		"F": "91",
+		"C": "33"
+		}
+		,
+		"record": {
+		"F": "98",
+		"C": "36"
+		},
+		"recordyear": "1998"
+		},
+		"temp_low": {
+		"normal": {
+		"F": "70",
+		"C": "21"
+		}
+		,
+		"record": {
+		"F": "61",
+		"C": "16"
+		},
+		"recordyear": "2002"
+		}
+	}
+}
